@@ -1,0 +1,7 @@
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+<section>  
+<header><h1> {{selectedItem.value}}</h1></header>
+<textarea [(ngModel)]="selectedItem.details"  placeholder="Add More Details About Your Item!"></textarea>    
+ <button class="pure-material-button-contained" (click)="back()">Back</button>
+<button class="pure-material-button-contained rt" (click)="updateItem()">Update</button>
+</section> 

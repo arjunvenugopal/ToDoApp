@@ -1,0 +1,17 @@
+<section class="todoapp">  
+<header>  
+<input class="new-todo" placeholder="Add New Item" autofocus="" [(ngModel)]="newItem.value" (keyup.enter)="addItem()">
+</header>
+    <section class="main" *ngIf="itemlist.length > 0">
+      <ul class="todo-list">
+        <li *ngFor="let item of itemlist" [class.completed]="item.completed">
+          <div class="view">
+            <input class="toggler" type="checkbox" (click)="toggleStatus(item)" [checked]="item.completed">
+            <label>{{item.value}}</label>   
+            <button class="more" (click)="openItem(item)"></button>
+            <button class="destroy" (click)="removeItem(item)"></button>
+          </div>
+        </li>
+      </ul>
+</section>  
+</section>
